@@ -13,7 +13,7 @@ import com.capgi.hbms.admin.model.BookingModel;
 import com.capgi.hbms.admin.model.RoomModel;
 import com.capgi.hbms.customer.model.CustomerModel;
 
-public class AdminDao {
+public class AdminDao implements AdminDaoInterface {
 
 	Connection con;
 	PreparedStatement ps;
@@ -24,11 +24,11 @@ public class AdminDao {
 	}
 	
 	
-	public boolean loginAdmin(CustomerModel Customermodel) {
+	public boolean loginAdmin(String user_id, String password) {
 		return false;
 	}
 	
-	public boolean logoutAdmin(CustomerModel Customermodel) {
+	public boolean logoutAdmin(CustomerModel customermodel) {
 		return false;
 	}
 	

@@ -9,19 +9,19 @@ import com.capgi.hbms.customer.model.CustomerModel;
 
 public interface AdminServiceInterface {
 	
-	boolean loginAdmin(CustomerModel customermodel);
-	boolean logoutAdmin(CustomerModel customermodel);
-	boolean addHotelAdmin(AdminModel adminmodel);
-	boolean deleteHotelAdmin(AdminModel adminmodel);
-	boolean modifyHotelAdmin(AdminModel adminmodel);
-	boolean addRoomAdmin(RoomModel roommodel);
-	boolean deleteRoomAdmin(RoomModel roommodel);
-	boolean modifyRoomAdmin(RoomModel roommodel);
+	boolean loginAdmin(String user_name, String password) throws Exception;
+	boolean logoutAdmin(CustomerModel customermodel) throws Exception;
+	boolean addHotelAdmin(AdminModel adminmodel) throws Exception;
+	boolean deleteHotelAdmin(int hotel_id) throws Exception;
+	boolean modifyHotelAdmin(int hotel_id) throws Exception;
+	boolean addRoomAdmin(RoomModel roommodel) throws Exception;
+	boolean deleteRoomAdmin(int room_id) throws Exception;
+	boolean modifyRoomAdmin(int room_id) throws Exception;
 	
-	List<AdminModel> listHotelAdmin(); 
-	List<RoomModel> listRoomAdmin();
-	List<BookingModel> listBookingsInHotelAdmin();
-	List<BookingModel> listGuestsInHotelAdmin();
-	List<BookingModel> viewBookingsInHotelOnDateAdmin();
+	List<AdminModel> listHotelAdmin() throws Exception; 
+	List<RoomModel> listRoomAdmin() throws Exception;
+	List<BookingModel> listBookingsInHotelAdmin() throws Exception;
+	List<BookingModel> listGuestsInHotelAdmin() throws Exception;
+	List<BookingModel> viewBookingsInHotelOnDateAdmin() throws Exception;
 	
 }

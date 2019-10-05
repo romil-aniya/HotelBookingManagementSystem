@@ -9,13 +9,13 @@ import com.capgi.hbms.admin.model.RoomModel;
 import com.capgi.hbms.customer.model.CustomerModel;
 
 
-public class AdminService {
+public class AdminService implements AdminServiceInterface {
 	
 	AdminDao admindao;
 	
-	public boolean loginAdmin(String user_name,String password) throws Exception {
+	public boolean loginAdmin(String user_name, String password) throws Exception {
 		admindao=new AdminDao();
-		return false;
+		return admindao.loginAdmin(user_name, password);
 		
 	}
 	
@@ -39,7 +39,7 @@ public class AdminService {
 		return admindao.modifyHotelAdmin(hotel_id);
 	}
 	
-	boolean addRoomAdmin(RoomModel roommodel) throws Exception {
+	public boolean addRoomAdmin(RoomModel roommodel) throws Exception {
 		admindao=new AdminDao();
 		return admindao.addRoomAdmin(roommodel);
 	}

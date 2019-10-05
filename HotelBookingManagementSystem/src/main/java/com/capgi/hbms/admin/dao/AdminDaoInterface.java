@@ -9,14 +9,14 @@ import com.capgi.hbms.customer.model.CustomerModel;
 
 public interface AdminDaoInterface {
 
-	boolean loginAdmin(CustomerModel Customermodel);
-	boolean logoutAdmin(CustomerModel Customermodel);
+	boolean loginAdmin(String user_id, String password);
+	boolean logoutAdmin(CustomerModel customermodel);
 	boolean addHotelAdmin(AdminModel adminmodel);
-	boolean deleteHotelAdmin(AdminModel adminmodel);
-	boolean modifyHotelAdmin(AdminModel adminmodel);
+	boolean deleteHotelAdmin(int hotel_id);
+	boolean modifyHotelAdmin(int hotel_id);
 	boolean addRoomAdmin(RoomModel roommodel);
-	boolean deleteRoomAdmin(RoomModel roommodel);
-	boolean modifyRoomAdmin(RoomModel roommodel);
+	boolean deleteRoomAdmin(int room_id);
+	boolean modifyRoomAdmin(int room_id);
 	
 	List<AdminModel> listHotelsAdmin(); 
 	List<RoomModel> listRoomsAdmin();

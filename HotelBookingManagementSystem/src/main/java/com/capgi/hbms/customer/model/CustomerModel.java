@@ -8,7 +8,6 @@ public class CustomerModel {
 	public CustomerModel() {
 		
 	}
-	
 
 	public CustomerModel(String user_id, String password, String role, String username, String address, String email,
 			int mobile_no, int phone) {

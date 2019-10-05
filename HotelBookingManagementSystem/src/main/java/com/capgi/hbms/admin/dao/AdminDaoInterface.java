@@ -17,10 +17,11 @@ public interface AdminDaoInterface {
 	boolean addRoomAdmin(RoomModel roommodel);
 	boolean deleteRoomAdmin(RoomModel roommodel);
 	boolean modifyRoomAdmin(RoomModel roommodel);
-	List<AdminModel> listHotelAdmin(); 
-	List<RoomModel> listRoomAdmin();
-	List<BookingModel> ListBookingsInHotelAdmin();
-	List<BookingModel> ListGuestsInHotelAdmin();
-	List<BookingModel> ViewBookingsInHotelOnDateAdmin();
+	
+	List<AdminModel> listHotelsAdmin(); 
+	List<RoomModel> listRoomsAdmin();
+	List<BookingModel> listBookingsInHotelAdmin();
+	List<BookingModel> listGuestsInHotelAdmin();
+	List<BookingModel> viewBookingsInHotelOnDateAdmin();
 	
 }

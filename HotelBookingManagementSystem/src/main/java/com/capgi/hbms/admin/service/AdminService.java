@@ -1,6 +1,5 @@
 package com.capgi.hbms.admin.service;
 
-import java.sql.SQLException;
 import java.util.List;
 
 import com.capgi.hbms.admin.dao.AdminDao;
@@ -60,9 +59,24 @@ public class AdminService {
 		return admindao.listHotelsAdmin();
 	}
 	
-	//public List<RoomModel> listRoomAdmin();
-	//public List<BookingModel> ListBookingsInHotelAdmin();
-	//public List<BookingModel> ListGuestsInHotelAdmin();
-	//public List<BookingModel> ViewBookingsInHotelOnDateAdmin();
+	public List<RoomModel> listRoomAdmin() throws Exception{
+		admindao=new AdminDao();
+		return admindao.listRoomsAdmin();
+	}
+	
+	public List<BookingModel> listBookingsInHotelAdmin() throws Exception{
+		admindao=new AdminDao();
+		return admindao.listBookingsInHotelAdmin();
+	}
+	
+	public List<BookingModel> listGuestsInHotelAdmin() throws Exception{
+		admindao=new AdminDao();
+		return admindao.listGuestsInHotelAdmin();
+	}
+	
+	public List<BookingModel> viewBookingsInHotelOnDateAdmin() throws Exception{
+		admindao=new AdminDao();
+		return admindao.viewBookingsInHotelOnDateAdmin();
+	}
 	
 }

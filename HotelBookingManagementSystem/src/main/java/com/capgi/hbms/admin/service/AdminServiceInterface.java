@@ -20,8 +20,8 @@ public interface AdminServiceInterface {
 	
 	List<AdminModel> listHotelAdmin(); 
 	List<RoomModel> listRoomAdmin();
-	List<BookingModel> ListBookingsInHotelAdmin();
-	List<BookingModel> ListGuestsInHotelAdmin();
-	List<BookingModel> ViewBookingsInHotelOnDateAdmin();
+	List<BookingModel> listBookingsInHotelAdmin();
+	List<BookingModel> listGuestsInHotelAdmin();
+	List<BookingModel> viewBookingsInHotelOnDateAdmin();
 	
 }

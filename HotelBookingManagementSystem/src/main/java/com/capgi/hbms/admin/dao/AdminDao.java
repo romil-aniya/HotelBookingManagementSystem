@@ -62,28 +62,28 @@ public class AdminDao {
 		return listhotelsadmin;
 	} 
 	
-	public boolean listRoomsAdmin(){
-		List<AdminModel> listroomsAdmin=new ArrayList<AdminModel>();
+	public List<RoomModel> listRoomsAdmin(){
+		List<RoomModel> listroomsAdmin=new ArrayList<RoomModel>();
 		
-		return false;
+		return listroomsAdmin;
 	}
 	
-	public boolean listBookingsInHotelAdmin(){
+	public List<BookingModel> listBookingsInHotelAdmin(){
 		List<BookingModel> listBookingsInHotelAdmin=new ArrayList<BookingModel>();
 		
-		return false;
+		return listBookingsInHotelAdmin;
 	}
 	
-	public boolean listGuestsInHotelAdmin(){
-		List<RoomModel> listGuestsInHotelAdmin=new ArrayList<RoomModel>();
+	public List<BookingModel> listGuestsInHotelAdmin(){
+		List<BookingModel> listGuestsInHotelAdmin=new ArrayList<BookingModel>();
 		
-		return false;
+		return listGuestsInHotelAdmin;
 	}
 	
-	public boolean viewBookingsInHotelOnDateAdmin(){
+	public List<BookingModel> viewBookingsInHotelOnDateAdmin(){
 		List<BookingModel> viewBookingsInHotelOnDateAdmin=new ArrayList<BookingModel>();
 		
-		return false;
+		return viewBookingsInHotelOnDateAdmin;
 	}
 	
 }

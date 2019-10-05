@@ -4,14 +4,14 @@ public class AdminModel {
 
 	private String hotel_id, user_id, city, hotel_name, address, description, email;
 	private double avg_rate_per_night, rating;
-	private int phone_no1, phone_no2;
+	private int phone_no1, phone_no2, fax;
 	
 	public AdminModel() {
 		
 	}
 	
 	public AdminModel(String hotel_id, String user_id, String city, String hotel_name, String address,
-			String description, String email, double avg_rate_per_night, double rating, int phone_no1, int phone_no2) {
+			String description, String email, double avg_rate_per_night, double rating, int phone_no1, int phone_no2, int fax) {
 		super();
 		this.hotel_id = hotel_id;
 		this.user_id = user_id;
@@ -24,6 +24,7 @@ public class AdminModel {
 		this.rating = rating;
 		this.phone_no1 = phone_no1;
 		this.phone_no2 = phone_no2;
+		this.fax = fax;
 	}
 
 
@@ -93,12 +94,19 @@ public class AdminModel {
 	public void setPhone_no2(int phone_no2) {
 		this.phone_no2 = phone_no2;
 	}
+	public int getFax() {
+		return fax;
+	}
+	public void setFax(int fax) {
+		this.fax = fax;
+	}
+
 	@Override
 	public String toString() {
 		return "AdminModel [hotel_id=" + hotel_id + ", user_id=" + user_id + ", city=" + city + ", hotel_name="
 				+ hotel_name + ", address=" + address + ", description=" + description + ", email=" + email
 				+ ", avg_rate_per_night=" + avg_rate_per_night + ", rating=" + rating + ", phone_no1=" + phone_no1
-				+ ", phone_no2=" + phone_no2 + "]";
+				+ ", phone_no2=" + phone_no2 + ", fax=" + fax + "]";
 	} 
 	
 	

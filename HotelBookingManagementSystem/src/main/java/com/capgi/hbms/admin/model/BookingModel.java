@@ -2,7 +2,7 @@ package com.capgi.hbms.admin.model;
 
 public class BookingModel {
 
-	private String booking_id, booked_from, booked_to;
+	private String booking_id, room_id, user_id, booked_from, booked_to;
 	private int no_of_adults, no_of_children;
 	private double amount;
 	
@@ -10,16 +10,19 @@ public class BookingModel {
 		
 	}
 	
-	public BookingModel(String booking_id, String booked_from, String booked_to, int no_of_adults, int no_of_children,
-			double amount) {
+	public BookingModel(String booking_id, String room_id, String user_id, String booked_from, String booked_to,
+			int no_of_adults, int no_of_children, double amount) {
 		super();
 		this.booking_id = booking_id;
+		this.room_id = room_id;
+		this.user_id = user_id;
 		this.booked_from = booked_from;
 		this.booked_to = booked_to;
 		this.no_of_adults = no_of_adults;
 		this.no_of_children = no_of_children;
 		this.amount = amount;
 	}
+
 
 	public String getBooking_id() {
 		return booking_id;
@@ -69,10 +72,27 @@ public class BookingModel {
 		this.amount = amount;
 	}
 
+	public String getRoom_id() {
+		return room_id;
+	}
+
+	public void setRoom_id(String room_id) {
+		this.room_id = room_id;
+	}
+
+	public String getUser_id() {
+		return user_id;
+	}
+
+	public void setUser_id(String user_id) {
+		this.user_id = user_id;
+	}
+
 	@Override
 	public String toString() {
-		return "BookingModel [booking_id=" + booking_id + ", booked_from=" + booked_from + ", booked_to=" + booked_to
-				+ ", no_of_adults=" + no_of_adults + ", no_of_children=" + no_of_children + ", amount=" + amount + "]";
+		return "BookingModel [booking_id=" + booking_id + ", room_id=" + room_id + ", user_id=" + user_id
+				+ ", booked_from=" + booked_from + ", booked_to=" + booked_to + ", no_of_adults=" + no_of_adults
+				+ ", no_of_children=" + no_of_children + ", amount=" + amount + "]";
 	}
 	
 	

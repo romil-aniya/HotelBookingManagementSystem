@@ -160,6 +160,12 @@
   	<description></description>
   	<servlet-class>com.capgi.hbms.admin.controller.ViewBookingsinHotelOnDateAdminController</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>ViewBookingsInHotelOnDateAdminController</servlet-name>
+  	<display-name>ViewBookingsInHotelOnDateAdminController</display-name>
+  	<description></description>
+  	<servlet-class>com.capgi.hbms.admin.controller.ViewBookingsInHotelOnDateAdminController</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>LoginAdminController</servlet-name>
   	<url-pattern>/LoginAdminController</url-pattern>
@@ -263,5 +269,9 @@
   <servlet-mapping>
   	<servlet-name>ViewBookingsinHotelOnDateAdminController</servlet-name>
   	<url-pattern>/ViewBookingsinHotelOnDateAdminController</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>ViewBookingsInHotelOnDateAdminController</servlet-name>
+  	<url-pattern>/ViewBookingsInHotelOnDateAdminController</url-pattern>
   </servlet-mapping>
 </web-app>

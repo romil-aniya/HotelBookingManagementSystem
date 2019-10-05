@@ -2,7 +2,7 @@ package com.capgi.hbms.admin.model;
 
 public class RoomModel {
 
-	private String room_id, room_type;
+	private String hotel_id, room_id, room_type;
 	private int room_no;
 	private double per_night_rate;
 	private Boolean availability;
@@ -11,14 +11,18 @@ public class RoomModel {
 		
 	}
 
-	public RoomModel(String room_id, String room_type, int room_no, double per_night_rate, Boolean availability) {
+	public RoomModel(String hotel_id, String room_id, String room_type, int room_no, double per_night_rate,
+			Boolean availability) {
 		super();
+		this.hotel_id = hotel_id;
 		this.room_id = room_id;
 		this.room_type = room_type;
 		this.room_no = room_no;
 		this.per_night_rate = per_night_rate;
 		this.availability = availability;
 	}
+
+
 
 	public String getRoom_id() {
 		return room_id;
@@ -60,12 +64,19 @@ public class RoomModel {
 		this.availability = availability;
 	}
 
+	public String getHotel_id() {
+		return hotel_id;
+	}
+
+	public void setHotel_id(String hotel_id) {
+		this.hotel_id = hotel_id;
+	}
+
 	@Override
 	public String toString() {
-		return "RoomModel [room_id=" + room_id + ", room_type=" + room_type + ", room_no=" + room_no
-				+ ", per_night_rate=" + per_night_rate + ", availability=" + availability + "]";
+		return "RoomModel [hotel_id=" + hotel_id + ", room_id=" + room_id + ", room_type=" + room_type + ", room_no="
+				+ room_no + ", per_night_rate=" + per_night_rate + ", availability=" + availability + "]";
 	}
-	
-	
+		
 	
 }

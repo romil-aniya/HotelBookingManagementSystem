@@ -8,12 +8,37 @@
   <name>HotelBookingManagementSystem Maven Webapp</name>
   <url>http://maven.apache.org</url>
   <dependencies>
+  
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
       <version>3.8.1</version>
       <scope>test</scope>
     </dependency>
+    
+    <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+	<dependency>
+   	  <groupId>mysql</groupId>
+   	  <artifactId>mysql-connector-java</artifactId>
+   	  <version>8.0.17</version>
+	</dependency>
+    
+    <!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api -->
+	<dependency>
+    	<groupId>org.junit.jupiter</groupId>
+    	<artifactId>junit-jupiter-api</artifactId>
+    	<version>5.5.2</version>
+    	<scope>test</scope>
+	</dependency>
+    
+    <!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-engine -->
+	<dependency>
+    	<groupId>org.junit.jupiter</groupId>
+    	<artifactId>junit-jupiter-engine</artifactId>
+    	<version>5.5.2</version>
+    	<scope>test</scope>
+	</dependency>
+    
   </dependencies>
   <build>
     <finalName>HotelBookingManagementSystem</finalName>

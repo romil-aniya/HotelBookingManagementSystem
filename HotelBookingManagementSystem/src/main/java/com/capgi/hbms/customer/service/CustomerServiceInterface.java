@@ -8,16 +8,16 @@ import com.capgi.hbms.customer.model.CustomerModel;
 
 public interface CustomerServiceInterface {
 
-	boolean registerCustomer(CustomerModel customermodel);
-	boolean loginCustomer(CustomerModel customermodel);
-	boolean logoutCustomer(CustomerModel customermodel);
-	boolean resetPasswordCustomer(CustomerModel customermodel);
-	boolean updateProfileCustomer(CustomerModel customermodel);
-	boolean bookRoomCustomer(RoomModel roommodel);
-	boolean modifyBookingCustomer(BookingModel bookingmodel);
-	List<CustomerModel> viewHotelCustomer(); 
-	List<RoomModel> viewRoomCustomer();
-	List<CustomerModel> viewProfileCustomer();
-	List<BookingModel> viewBookingCustomer();
+	boolean registerCustomer(CustomerModel customermodel) throws Exception;
+	boolean loginCustomer(String user_name, String password) throws Exception;
+	boolean logoutCustomer(CustomerModel customermodel) throws Exception;
+	boolean resetPasswordCustomer(int user_id) throws Exception;
+	boolean updateProfileCustomer(int user_id) throws Exception;
+	boolean bookRoomCustomer(RoomModel roommodel) throws Exception;
+	boolean modifyBookingCustomer(BookingModel bookingmodel) throws Exception;
+	List<CustomerModel> viewHotelCustomer() throws Exception; 
+	List<RoomModel> viewRoomCustomer() throws Exception;
+	List<CustomerModel> viewProfileCustomer() throws Exception;
+	List<BookingModel> viewBookingCustomer() throws Exception;
 	
 }

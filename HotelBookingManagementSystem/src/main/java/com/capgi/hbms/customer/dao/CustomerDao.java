@@ -1,10 +1,13 @@
 package com.capgi.hbms.customer.dao;
 
+import com.capgi.hbms.customer.model.*;
+import com.capgi.hbms.admin.model.*;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 
 public class CustomerDao implements CustomerDaoInterface{
@@ -21,7 +24,7 @@ public class CustomerDao implements CustomerDaoInterface{
 		return false;
 	}
 	
-	public boolean loginCustomer(CustomerModel customermodel) {
+	public boolean loginCustomer(String user_name, String password) {
 		return false;
 	}
 	
@@ -29,11 +32,11 @@ public class CustomerDao implements CustomerDaoInterface{
 		return false;
 	}
 	
-	public boolean resetPasswordCustomer(CustomerModel customermodel) {
+	public boolean resetPasswordCustomer(int user_id) {
 		return false;
 	}
 	
-	public boolean updateProfileCustomer(CustomerModel customermodel) {
+	public boolean updateProfileCustomer(int user_id) {
 		return false;
 	}
 	

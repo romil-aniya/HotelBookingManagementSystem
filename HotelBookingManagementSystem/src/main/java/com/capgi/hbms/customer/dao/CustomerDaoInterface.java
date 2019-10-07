@@ -9,10 +9,10 @@ import com.capgi.hbms.customer.model.CustomerModel;
 public interface CustomerDaoInterface {
 
 	boolean registerCustomer(CustomerModel customermodel);
-	boolean loginCustomer(CustomerModel customermodel);
+	boolean loginCustomer(String user_name, String paasword);
 	boolean logoutCustomer(CustomerModel customermodel);
-	boolean resetPasswordCustomer(CustomerModel customermodel);
-	boolean updateProfileCustomer(CustomerModel customermodel);
+	boolean resetPasswordCustomer(int user_id);
+	boolean updateProfileCustomer(int user_id);
 	boolean bookRoomCustomer(RoomModel roommodel);
 	boolean modifyBookingCustomer(BookingModel bookingmodel);
 	List<CustomerModel> viewHotelCustomer(); 

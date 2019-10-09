@@ -2,20 +2,20 @@ package com.capgi.hbms.customer.model;
 
 public class CustomerModel {
 
-	private String user_id,password,role,username,address,email;
+	private String user_id,password,role,user_name,address,email;
 	private int mobile_no,phone;
 	
 	public CustomerModel() {
 		
 	}
 
-	public CustomerModel(String user_id, String password, String role, String username, String address, String email,
+	public CustomerModel(String user_id, String password, String role, String user_name, String address, String email,
 			int mobile_no, int phone) {
 		super();
 		this.user_id = user_id;
 		this.password = password;
 		this.role = role;
-		this.username = username;
+		this.user_name = user_name;
 		this.address = address;
 		this.email = email;
 		this.mobile_no = mobile_no;
@@ -48,12 +48,12 @@ public class CustomerModel {
 		this.role = role;
 	}
 
-	public String getUsername() {
-		return username;
+	public String getUser_name() {
+		return user_name;
 	}
 
-	public void setUsername(String username) {
-		this.username = username;
+	public void setUser_name(String username) {
+		this.user_name = user_name;
 	}
 
 	public String getAddress() {
@@ -90,8 +90,8 @@ public class CustomerModel {
 
 	@Override
 	public String toString() {
-		return "CustomerModel [user_id=" + user_id + ", password=" + password + ", role=" + role + ", username="
-				+ username + ", address=" + address + ", email=" + email + ", mobile_no=" + mobile_no + ", phone="
+		return "CustomerModel [user_id=" + user_id + ", password=" + password + ", role=" + role + ", user_name="
+				+ user_name + ", address=" + address + ", email=" + email + ", mobile_no=" + mobile_no + ", phone="
 				+ phone + "]";
 	}
 	

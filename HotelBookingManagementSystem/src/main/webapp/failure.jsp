@@ -7,6 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<p>Main Hoon HomePage</p>
+
 </body>
 </html>

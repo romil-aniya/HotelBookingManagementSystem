@@ -2,15 +2,16 @@ package com.capgi.hbms.customer.model;
 
 public class CustomerModel {
 
-	private String user_id,password,role,user_name,address,email;
-	private int mobile_no,phone;
+	private int user_id;
+	private String password,role,user_name,address,email;
+	private long mobile_no,phone;
 	
 	public CustomerModel() {
 		
 	}
 
-	public CustomerModel(String user_id, String password, String role, String user_name, String address, String email,
-			int mobile_no, int phone) {
+	public CustomerModel(int user_id, String password, String role, String user_name, String address, String email,
+			long mobile_no, long phone) {
 		super();
 		this.user_id = user_id;
 		this.password = password;
@@ -20,15 +21,17 @@ public class CustomerModel {
 		this.email = email;
 		this.mobile_no = mobile_no;
 		this.phone = phone;
+		
+		System.out.println(password);
 	}
 
 
 
-	public String getUser_id() {
+	public int getUser_id() {
 		return user_id;
 	}
 
-	public void setUser_id(String user_id) {
+	public void setUser_id(int user_id) {
 		this.user_id = user_id;
 	}
 
@@ -52,7 +55,7 @@ public class CustomerModel {
 		return user_name;
 	}
 
-	public void setUser_name(String username) {
+	public void setUser_name(String user_name) {
 		this.user_name = user_name;
 	}
 
@@ -72,19 +75,19 @@ public class CustomerModel {
 		this.email = email;
 	}
 
-	public int getMobile_no() {
+	public long getMobile_no() {
 		return mobile_no;
 	}
 
-	public void setMobile_no(int mobile_no) {
+	public void setMobile_no(long mobile_no) {
 		this.mobile_no = mobile_no;
 	}
 
-	public int getPhone() {
+	public long getPhone() {
 		return phone;
 	}
 
-	public void setPhone(int phone) {
+	public void setPhone(long phone) {
 		this.phone = phone;
 	}
 

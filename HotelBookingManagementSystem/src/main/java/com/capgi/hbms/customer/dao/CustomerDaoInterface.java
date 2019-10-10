@@ -1,5 +1,6 @@
 package com.capgi.hbms.customer.dao;
 
+import java.sql.SQLException;
 import java.util.List;
 
 import com.capgi.hbms.admin.model.BookingModel;
@@ -8,7 +9,7 @@ import com.capgi.hbms.customer.model.CustomerModel;
 
 public interface CustomerDaoInterface {
 
-	boolean registerCustomer(CustomerModel customermodel);
+	boolean registerCustomer(CustomerModel customermodel) throws Exception;
 	boolean loginCustomer(String user_name, String paasword);
 	boolean logoutCustomer(CustomerModel customermodel);
 	boolean resetPasswordCustomer(int user_id);

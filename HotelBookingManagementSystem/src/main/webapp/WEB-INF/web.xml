@@ -5,273 +5,273 @@
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
   <servlet>
-  	<servlet-name>LoginAdminController</servlet-name>
+  	<servlet-name>com.capgi.hbms.admin.controller.LoginAdminController</servlet-name>
   	<display-name>LoginAdminController</display-name>
   	<description></description>
   	<servlet-class>com.capgi.hbms.admin.controller.LoginAdminController</servlet-class>
   </servlet>
-  <servlet>
-  	<servlet-name>RegisterCustomerController</servlet-name>
+  <!--  <servlet>
+  	<servlet-name>com.capgi.hbms.customer.controller.RegisterCustomerController</servlet-name>
   	<display-name>RegisterCustomerController</display-name>
   	<description></description>
   	<servlet-class>com.capgi.hbms.customer.controller.RegisterCustomerController</servlet-class>
-  </servlet>
+  </servlet>  -->
   <servlet>
-  	<servlet-name>LoginCustomerController</servlet-name>
+  	<servlet-name>com.capgi.hbms.customer.controller.LoginCustomerController</servlet-name>
   	<display-name>LoginCustomerController</display-name>
   	<description></description>
   	<servlet-class>com.capgi.hbms.customer.controller.LoginCustomerController</servlet-class>
   </servlet>
   <servlet>
-  	<servlet-name>LogoutCustomerController</servlet-name>
+  	<servlet-name>com.capgi.hbms.customer.controller.LogoutCustomerController</servlet-name>
   	<display-name>LogoutCustomerController</display-name>
   	<description></description>
   	<servlet-class>com.capgi.hbms.customer.controller.LogoutCustomerController</servlet-class>
   </servlet>
   <servlet>
-  	<servlet-name>ViewHotelCustomerController</servlet-name>
+  	<servlet-name>com.capgi.hbms.customer.controller.ViewHotelCustomerController</servlet-name>
   	<display-name>ViewHotelCustomerController</display-name>
   	<description></description>
   	<servlet-class>com.capgi.hbms.customer.controller.ViewHotelCustomerController</servlet-class>
   </servlet>
   <servlet>
-  	<servlet-name>ViewRoomCustomerController</servlet-name>
+  	<servlet-name>com.capgi.hbms.customer.controller.ViewRoomCustomerController</servlet-name>
   	<display-name>ViewRoomCustomerController</display-name>
   	<description></description>
   	<servlet-class>com.capgi.hbms.customer.controller.ViewRoomCustomerController</servlet-class>
   </servlet>
   <servlet>
-  	<servlet-name>BookRoomCustomerController</servlet-name>
+  	<servlet-name>com.capgi.hbms.customer.controller.BookRoomCustomerController</servlet-name>
   	<display-name>BookRoomCustomerController</display-name>
   	<description></description>
   	<servlet-class>com.capgi.hbms.customer.controller.BookRoomCustomerController</servlet-class>
   </servlet>
   <servlet>
-  	<servlet-name>ViewBookingCustomerController</servlet-name>
+  	<servlet-name>com.capgi.hbms.customer.controller.ViewBookingCustomerController</servlet-name>
   	<display-name>ViewBookingCustomerController</display-name>
   	<description></description>
   	<servlet-class>com.capgi.hbms.customer.controller.ViewBookingCustomerController</servlet-class>
   </servlet>
   <servlet>
-  	<servlet-name>ModifyBookingCustomerController</servlet-name>
+  	<servlet-name>com.capgi.hbms.customer.controller.ModifyBookingCustomerController</servlet-name>
   	<display-name>ModifyBookingCustomerController</display-name>
   	<description></description>
   	<servlet-class>com.capgi.hbms.customer.controller.ModifyBookingCustomerController</servlet-class>
   </servlet>
   <servlet>
-  	<servlet-name>ViewProfileCustomerController</servlet-name>
+  	<servlet-name>com.capgi.hbms.customer.controller.ViewProfileCustomerController</servlet-name>
   	<display-name>ViewProfileCustomerController</display-name>
   	<description></description>
   	<servlet-class>com.capgi.hbms.customer.controller.ViewProfileCustomerController</servlet-class>
   </servlet>
   <servlet>
-  	<servlet-name>UpdateProfileCustomerController</servlet-name>
+  	<servlet-name>com.capgi.hbms.customer.controller.UpdateProfileCustomerController</servlet-name>
   	<display-name>UpdateProfileCustomerController</display-name>
   	<description></description>
   	<servlet-class>com.capgi.hbms.customer.controller.UpdateProfileCustomerController</servlet-class>
   </servlet>
   <servlet>
-  	<servlet-name>ResetPasswordCustomerController</servlet-name>
+  	<servlet-name>com.capgi.hbms.customer.controller.ResetPasswordCustomerController</servlet-name>
   	<display-name>ResetPasswordCustomerController</display-name>
   	<description></description>
   	<servlet-class>com.capgi.hbms.customer.controller.ResetPasswordCustomerController</servlet-class>
   </servlet>
   <servlet>
-  	<servlet-name>LogoutAdminController</servlet-name>
+  	<servlet-name>com.capgi.hbms.admin.controller.LogoutAdminController</servlet-name>
   	<display-name>LogoutAdminController</display-name>
   	<description></description>
   	<servlet-class>com.capgi.hbms.admin.controller.LogoutAdminController</servlet-class>
   </servlet>
   <servlet>
-  	<servlet-name>ListHotelAdminController</servlet-name>
+  	<servlet-name>com.capgi.hbms.admin.controller.ListHotelAdminController</servlet-name>
   	<display-name>ListHotelAdminController</display-name>
   	<description></description>
   	<servlet-class>com.capgi.hbms.admin.controller.ListHotelAdminController</servlet-class>
   </servlet>
   <servlet>
-  	<servlet-name>ListRoomAdminController</servlet-name>
+  	<servlet-name>com.capgi.hbms.admin.controller.ListRoomAdminController</servlet-name>
   	<display-name>ListRoomAdminController</display-name>
   	<description></description>
   	<servlet-class>com.capgi.hbms.admin.controller.ListRoomAdminController</servlet-class>
   </servlet>
   <servlet>
-  	<servlet-name>AddHotelAdminController</servlet-name>
+  	<servlet-name>com.capgi.hbms.admin.controller.AddHotelAdminController</servlet-name>
   	<display-name>AddHotelAdminController</display-name>
   	<description></description>
   	<servlet-class>com.capgi.hbms.admin.controller.AddHotelAdminController</servlet-class>
   </servlet>
   <servlet>
-  	<servlet-name>DeleteHotelAdminController</servlet-name>
+  	<servlet-name>com.capgi.hbms.admin.controller.DeleteHotelAdminController</servlet-name>
   	<display-name>DeleteHotelAdminController</display-name>
   	<description></description>
   	<servlet-class>com.capgi.hbms.admin.controller.DeleteHotelAdminController</servlet-class>
   </servlet>
   <servlet>
-  	<servlet-name>ModifyHotelAdminController</servlet-name>
+  	<servlet-name>com.capgi.hbms.admin.controller.ModifyHotelAdminController</servlet-name>
   	<display-name>ModifyHotelAdminController</display-name>
   	<description></description>
   	<servlet-class>com.capgi.hbms.admin.controller.ModifyHotelAdminController</servlet-class>
   </servlet>
   <servlet>
-  	<servlet-name>AddRoomAdminController</servlet-name>
+  	<servlet-name>com.capgi.hbms.admin.controller.AddRoomAdminController</servlet-name>
   	<display-name>AddRoomAdminController</display-name>
   	<description></description>
   	<servlet-class>com.capgi.hbms.admin.controller.AddRoomAdminController</servlet-class>
   </servlet>
   <servlet>
-  	<servlet-name>DeleteRoomAdminController</servlet-name>
+  	<servlet-name>com.capgi.hbms.admin.controller.DeleteRoomAdminController</servlet-name>
   	<display-name>DeleteRoomAdminController</display-name>
   	<description></description>
   	<servlet-class>com.capgi.hbms.admin.controller.DeleteRoomAdminController</servlet-class>
   </servlet>
   <servlet>
-  	<servlet-name>ModifyRoomAdminController</servlet-name>
+  	<servlet-name>com.capgi.hbms.admin.controller.ModifyRoomAdminController</servlet-name>
   	<display-name>ModifyRoomAdminController</display-name>
   	<description></description>
   	<servlet-class>com.capgi.hbms.admin.controller.ModifyRoomAdminController</servlet-class>
   </servlet>
   <servlet>
-  	<servlet-name>ListBookingsInHotelAdminController</servlet-name>
+  	<servlet-name>com.capgi.hbms.admin.controller.ListBookingsInHotelAdminController</servlet-name>
   	<display-name>ListBookingsInHotelAdminController</display-name>
   	<description></description>
   	<servlet-class>com.capgi.hbms.admin.controller.ListBookingsInHotelAdminController</servlet-class>
   </servlet>
   <servlet>
-  	<servlet-name>ListHotelsAdminController</servlet-name>
+  	<servlet-name>com.capgi.hbms.admin.controller.ListHotelsAdminController</servlet-name>
   	<display-name>ListHotelsAdminController</display-name>
   	<description></description>
   	<servlet-class>com.capgi.hbms.admin.controller.ListHotelsAdminController</servlet-class>
   </servlet>
   <servlet>
-  	<servlet-name>ListRoomsAdminController</servlet-name>
+  	<servlet-name>com.capgi.hbms.admin.controller.ListRoomsAdminController</servlet-name>
   	<display-name>ListRoomsAdminController</display-name>
   	<description></description>
   	<servlet-class>com.capgi.hbms.admin.controller.ListRoomsAdminController</servlet-class>
   </servlet>
   <servlet>
-  	<servlet-name>ListGuestsInHotelAdminController</servlet-name>
+  	<servlet-name>com.capgi.hbms.admin.controller.ListGuestsInHotelAdminController</servlet-name>
   	<display-name>ListGuestsInHotelAdminController</display-name>
   	<description></description>
   	<servlet-class>com.capgi.hbms.admin.controller.ListGuestsInHotelAdminController</servlet-class>
   </servlet>
   <servlet>
-  	<servlet-name>ViewBookingsinHotelOnDateAdminController</servlet-name>
+  	<servlet-name>com.capgi.hbms.admin.controller.ViewBookingsinHotelOnDateAdminController</servlet-name>
   	<display-name>ViewBookingsinHotelOnDateAdminController</display-name>
   	<description></description>
   	<servlet-class>com.capgi.hbms.admin.controller.ViewBookingsinHotelOnDateAdminController</servlet-class>
   </servlet>
   <servlet>
-  	<servlet-name>ViewBookingsInHotelOnDateAdminController</servlet-name>
+  	<servlet-name>com.capgi.hbms.admin.controller.ViewBookingsInHotelOnDateAdminController</servlet-name>
   	<display-name>ViewBookingsInHotelOnDateAdminController</display-name>
   	<description></description>
   	<servlet-class>com.capgi.hbms.admin.controller.ViewBookingsInHotelOnDateAdminController</servlet-class>
   </servlet>
   <servlet-mapping>
-  	<servlet-name>LoginAdminController</servlet-name>
+  	<servlet-name>com.capgi.hbms.admin.controller.LoginAdminController</servlet-name>
   	<url-pattern>/LoginAdminController</url-pattern>
   </servlet-mapping>
+ <!--  <servlet-mapping>
+  	<servlet-name>com.capgi.hbms.customer.controller.RegisterCustomerController</servlet-name>
+  	<url-pattern>/RegisterCustomerController</url-pattern> 
+  </servlet-mapping> -->
   <servlet-mapping>
-  	<servlet-name>RegisterCustomerController</servlet-name>
-  	<url-pattern>/RegisterCustomerController</url-pattern>
-  </servlet-mapping>
-  <servlet-mapping>
-  	<servlet-name>LoginCustomerController</servlet-name>
+  	<servlet-name>com.capgi.hbms.customer.controller.LoginCustomerController</servlet-name>
   	<url-pattern>/LoginCustomerController</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
-  	<servlet-name>LogoutCustomerController</servlet-name>
+  	<servlet-name>com.capgi.hbms.customer.controller.LogoutCustomerController</servlet-name>
   	<url-pattern>/LogoutCustomerController</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
-  	<servlet-name>ViewHotelCustomerController</servlet-name>
+  	<servlet-name>com.capgi.hbms.customer.controller.ViewHotelCustomerController</servlet-name>
   	<url-pattern>/ViewHotelCustomerController</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
-  	<servlet-name>ViewRoomCustomerController</servlet-name>
+  	<servlet-name>com.capgi.hbms.customer.controller.ViewRoomCustomerController</servlet-name>
   	<url-pattern>/ViewRoomCustomerController</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
-  	<servlet-name>BookRoomCustomerController</servlet-name>
+  	<servlet-name>com.capgi.hbms.customer.controller.BookRoomCustomerController</servlet-name>
   	<url-pattern>/BookRoomCustomerController</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
-  	<servlet-name>ViewBookingCustomerController</servlet-name>
+  	<servlet-name>com.capgi.hbms.customer.controller.ViewBookingCustomerController</servlet-name>
   	<url-pattern>/ViewBookingCustomerController</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
-  	<servlet-name>ModifyBookingCustomerController</servlet-name>
+  	<servlet-name>com.capgi.hbms.customer.controller.ModifyBookingCustomerController</servlet-name>
   	<url-pattern>/ModifyBookingCustomerController</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
-  	<servlet-name>ViewProfileCustomerController</servlet-name>
+  	<servlet-name>com.capgi.hbms.customer.controller.ViewProfileCustomerController</servlet-name>
   	<url-pattern>/ViewProfileCustomerController</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
-  	<servlet-name>UpdateProfileCustomerController</servlet-name>
+  	<servlet-name>com.capgi.hbms.customer.controller.UpdateProfileCustomerController</servlet-name>
   	<url-pattern>/UpdateProfileCustomerController</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
-  	<servlet-name>ResetPasswordCustomerController</servlet-name>
+  	<servlet-name>com.capgi.hbms.customer.controller.ResetPasswordCustomerController</servlet-name>
   	<url-pattern>/ResetPasswordCustomerController</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
-  	<servlet-name>LogoutAdminController</servlet-name>
+  	<servlet-name>com.capgi.hbms.admin.controller.LogoutAdminController</servlet-name>
   	<url-pattern>/LogoutAdminController</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
-  	<servlet-name>ListHotelAdminController</servlet-name>
+  	<servlet-name>com.capgi.hbms.admin.controller.ListHotelAdminController</servlet-name>
   	<url-pattern>/ListHotelAdminController</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
-  	<servlet-name>ListRoomAdminController</servlet-name>
+  	<servlet-name>com.capgi.hbms.admin.controller.ListRoomAdminController</servlet-name>
   	<url-pattern>/ListRoomAdminController</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
-  	<servlet-name>AddHotelAdminController</servlet-name>
+  	<servlet-name>com.capgi.hbms.admin.controller.AddHotelAdminController</servlet-name>
   	<url-pattern>/AddHotelAdminController</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
-  	<servlet-name>DeleteHotelAdminController</servlet-name>
+  	<servlet-name>com.capgi.hbms.admin.controller.DeleteHotelAdminController</servlet-name>
   	<url-pattern>/DeleteHotelAdminController</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
-  	<servlet-name>ModifyHotelAdminController</servlet-name>
+  	<servlet-name>com.capgi.hbms.admin.controller.ModifyHotelAdminController</servlet-name>
   	<url-pattern>/ModifyHotelAdminController</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
-  	<servlet-name>AddRoomAdminController</servlet-name>
+  	<servlet-name>com.capgi.hbms.admin.controller.AddRoomAdminController</servlet-name>
   	<url-pattern>/AddRoomAdminController</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
-  	<servlet-name>DeleteRoomAdminController</servlet-name>
+  	<servlet-name>com.capgi.hbms.admin.controller.DeleteRoomAdminController</servlet-name>
   	<url-pattern>/DeleteRoomAdminController</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
-  	<servlet-name>ModifyRoomAdminController</servlet-name>
+  	<servlet-name>com.capgi.hbms.admin.controller.ModifyRoomAdminController</servlet-name>
   	<url-pattern>/ModifyRoomAdminController</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
-  	<servlet-name>ListBookingsInHotelAdminController</servlet-name>
+  	<servlet-name>com.capgi.hbms.admin.controller.ListBookingsInHotelAdminController</servlet-name>
   	<url-pattern>/ListBookingsInHotelAdminController</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
-  	<servlet-name>ListHotelsAdminController</servlet-name>
+  	<servlet-name>com.capgi.hbms.admin.controller.ListHotelsAdminController</servlet-name>
   	<url-pattern>/ListHotelsAdminController</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
-  	<servlet-name>ListRoomsAdminController</servlet-name>
+  	<servlet-name>com.capgi.hbms.admin.controller.ListRoomsAdminController</servlet-name>
   	<url-pattern>/ListRoomsAdminController</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
-  	<servlet-name>ListGuestsInHotelAdminController</servlet-name>
+  	<servlet-name>com.capgi.hbms.admin.controller.ListGuestsInHotelAdminController</servlet-name>
   	<url-pattern>/ListGuestsInHotelAdminController</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
-  	<servlet-name>ViewBookingsinHotelOnDateAdminController</servlet-name>
+  	<servlet-name>com.capgi.hbms.admin.controller.ViewBookingsinHotelOnDateAdminController</servlet-name>
   	<url-pattern>/ViewBookingsinHotelOnDateAdminController</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
-  	<servlet-name>ViewBookingsInHotelOnDateAdminController</servlet-name>
+  	<servlet-name>com.capgi.hbms.admin.controller.ViewBookingsInHotelOnDateAdminController</servlet-name>
   	<url-pattern>/ViewBookingsInHotelOnDateAdminController</url-pattern>
   </servlet-mapping>
 </web-app>

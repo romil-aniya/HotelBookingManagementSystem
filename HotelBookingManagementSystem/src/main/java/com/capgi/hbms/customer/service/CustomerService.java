@@ -8,9 +8,10 @@ import com.capgi.hbms.customer.model.*;
 public class CustomerService implements CustomerServiceInterface{
 	
 	CustomerDao customerdao;
-	
 	public boolean registerCustomer(CustomerModel customermodel) throws Exception {
+		System.out.println("inside CustmerService class");
 		customerdao = new CustomerDao();
+		System.out.println("Ready to call customerdao.registerCustomer(customermodel)");
 		return customerdao.registerCustomer(customermodel);
 	}
 	

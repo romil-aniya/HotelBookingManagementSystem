@@ -1,6 +1,3 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html>
 <html>
 <head>
     <title>REGISTRATION FORM</title>
@@ -37,8 +34,7 @@
 <br>
 
 
-    <form action="RegisterCustomerController" method="post">
-    
+    <form method="" action="">
  <caption><center><h1>Registration Form</h1></center></caption>
     <table border="1" align="center" width="400" bgcolor="#99A3A4" >
 
@@ -48,7 +44,7 @@
 
         <th>Your first name</th>
 
-        <td><input type="text" name="first_name"/></td>
+        <td><input type="text"/></td>
 
     </tr>
 
@@ -56,7 +52,7 @@
 
         <th>Your last name</th>
 
-        <td><input type="text"  name="last_name"/></td>
+        <td><input type="text"/></td>
 
     </tr>
 
@@ -64,7 +60,7 @@
 
         <th>Enter your password</th>
 
-        <td><input type="password" name="password"/></td>
+        <td><input type="password"/></td>
 
     </tr>
 
@@ -80,23 +76,15 @@
 
         <th>Enter your email</th>
 
-        <td><input type="email" name="email"/></td>
+        <td><input type="email"/></td>
 
     </tr>
 
     <tr>
 
-        <th>Mobile Number</th>
+        <th>Contact Number</th>
 
-        <td><input type="text" name="mobile_no"/></td>
-
-    </tr>
-    
-    <tr>
-
-        <th>Phone Number</th>
-
-        <td><input type="text" name="phone"/></td>
+        <td><input type="number"/></td>
 
     </tr>
 
@@ -104,10 +92,49 @@
 
         <th>Residential Address</th>
 
-        <td><textarea rows="8" cols="27" name="address"></textarea></td>
+        <td><textarea rows="8" cols="27"></textarea></td>
 
     </tr>
 
+    <tr>
+
+        <th>Your Gender</th>
+
+        <td>
+
+        Male<input type="radio" name="g" value="m"/>
+        Female<input type="radio" name="g" value="f"/>
+
+        </td>
+
+    </tr>
+
+    <tr>
+
+        <th>Date of Birth</th>
+
+        <td><input type="date"/></td>
+
+    </tr>
+
+    <tr>
+
+        <th>Select your Country</th>
+
+        <td>
+
+        <select name="country">
+
+                <option value="India">India</option>
+                <option value="China">China</option>
+                <option value="SriLanka">SriLanka</option>
+                <option value="Nepal">Nepal</option>
+            
+        </select>
+
+        </td>
+
+    </tr>
 
     <tr>
 
@@ -121,7 +148,7 @@
 
 </table>
 </form>
-<!--  <footer>
+<footer>
 <nav class="navbar fixed-bottom navbar-dark bg-dark">
   <ul style='list-style-type:none;'>
             <li><a href="home.html">Home</a></li>
@@ -132,6 +159,6 @@
 
         </ul>
 </nav>
-</footer>  -->
+</footer>
 </body>
 </html>

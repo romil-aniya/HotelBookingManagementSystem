@@ -82,8 +82,22 @@ public class AdminDao implements AdminDaoInterface {
 		return listhotelsadmin;
 	} 
 	
-	public List<RoomModel> listRoomsAdmin(){
+	public List<RoomModel> listRoomsAdmin() throws Exception{
 		List<RoomModel> listroomsAdmin=new ArrayList<RoomModel>();
+		ps=con.prepareStatement("select * from roomdetails where hotel_id");
+		rs=ps.executeQuery();
+		
+		while(rs.next())
+		{
+			RoomModel roommodel=new RoomModel();
+			roommodel.setHotel_id(rs.getString(1));
+			roommodel.setRoom_id(rs.getString(2));
+			roommodel.setRoom_no(rs.getInt(3));
+			roommodel.setRoom_type(rs.getString(4));
+			roommodel.setPer_night_rate(rs.getDouble(5));
+			roommodel.setAvailability(rs.getBoolean(6));
+			listroomsAdmin.add(roommodel);
+		}
 		
 		return listroomsAdmin;
 	}

@@ -20,7 +20,7 @@ public interface AdminDaoInterface {
 	boolean modifyRoomAdmin(int room_id);
 	
 	List<AdminModel> listHotelsAdmin() throws SQLException; 
-	List<RoomModel> listRoomsAdmin();
+	List<RoomModel> listRoomsAdmin() throws Exception;
 	List<BookingModel> listBookingsInHotelAdmin();
 	List<BookingModel> listGuestsInHotelAdmin();
 	List<BookingModel> viewBookingsInHotelOnDateAdmin();

@@ -12,7 +12,7 @@ public interface AdminDaoInterface {
 
 	boolean loginAdmin(String user_id, String password);
 	boolean logoutAdmin(CustomerModel customermodel);
-	boolean addHotelAdmin(AdminModel adminmodel);
+	boolean addHotelAdmin(AdminModel adminmodel) throws Exception;
 	boolean deleteHotelAdmin(int hotel_id);
 	boolean modifyHotelAdmin(int hotel_id);
 	boolean addRoomAdmin(RoomModel roommodel);

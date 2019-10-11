@@ -34,8 +34,30 @@ public class AdminDao implements AdminDaoInterface {
 		return false;
 	}
 	
-	public boolean addHotelAdmin(AdminModel adminmodel) {
+	public boolean addHotelAdmin(AdminModel adminmodel) throws Exception {
+		
+		ps=con.prepareStatement("insert into Users values(?,?,?,?,?,?,?,?,?,?,?)");
+		ps.setInt(1, adminmodel.getHotel_id());
+		ps.setString(2, adminmodel.getCity());
+		ps.setString(3, adminmodel.getHotel_name());
+		ps.setString(4, adminmodel.getAddress());
+		ps.setString(5, adminmodel.getDescription());
+		ps.setDouble(6, adminmodel.getAvg_rate_per_night());
+		ps.setLong(7, adminmodel.getPhone_no1());
+		ps.setLong(8, adminmodel.getPhone_no2());
+		ps.setDouble(9, adminmodel.getRating());
+		ps.setString(10, adminmodel.getEmail());
+		ps.setInt(11, adminmodel.getFax());
+		
+		int n=ps.executeUpdate();
+		System.out.println("Query Executed");
+		if(n>0) {
+			System.out.println("Customer Added");
+			return true;
+		}
+		System.out.println("Failed");
 		return false;
+
 	}
 	
 	public boolean deleteHotelAdmin(int hotel_id) {
@@ -66,7 +88,7 @@ public class AdminDao implements AdminDaoInterface {
 		
 		while(rs.next()) {
 		AdminModel adminmodel=new AdminModel();
-		adminmodel.setHotel_id(rs.getString(1));
+		adminmodel.setHotel_id(rs.getInt(1));
 		adminmodel.setCity(rs.getString(2));
 		adminmodel.setHotel_name(rs.getString(3));
 		adminmodel.setAddress(rs.getString(4));

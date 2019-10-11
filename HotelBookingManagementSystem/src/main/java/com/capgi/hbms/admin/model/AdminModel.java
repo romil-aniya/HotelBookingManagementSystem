@@ -2,19 +2,19 @@ package com.capgi.hbms.admin.model;
 
 public class AdminModel {
 
-	private String hotel_id, user_id, city, hotel_name, address, description, email;
+	private int hotel_id;
+	private String city, hotel_name, address, description, email;
 	private double avg_rate_per_night, rating;
-	private int phone_no1, phone_no2, fax;
+	private long phone_no1, phone_no2;
+	private int fax;
 	
 	public AdminModel() {
 		
 	}
 	
-	public AdminModel(String hotel_id, String user_id, String city, String hotel_name, String address,
-			String description, String email, double avg_rate_per_night, double rating, int phone_no1, int phone_no2, int fax) {
+	public AdminModel(int hotel_id, String city, String hotel_name, String address, String description, String email, double avg_rate_per_night, double rating, long phone_no1, long phone_no2, int fax) {
 		super();
 		this.hotel_id = hotel_id;
-		this.user_id = user_id;
 		this.city = city;
 		this.hotel_name = hotel_name;
 		this.address = address;
@@ -28,17 +28,11 @@ public class AdminModel {
 	}
 
 
-	public String getHotel_id() {
+	public int getHotel_id() {
 		return hotel_id;
 	}
-	public void setHotel_id(String hotel_id) {
+	public void setHotel_id(int hotel_id) {
 		this.hotel_id = hotel_id;
-	}
-	public String getUser_id() {
-		return user_id;
-	}
-	public void setUser_id(String user_id) {
-		this.user_id = user_id;
 	}
 	public String getCity() {
 		return city;
@@ -82,16 +76,16 @@ public class AdminModel {
 	public void setRating(double rating) {
 		this.rating = rating;
 	}
-	public int getPhone_no1() {
+	public long getPhone_no1() {
 		return phone_no1;
 	}
-	public void setPhone_no1(int phone_no1) {
+	public void setPhone_no1(long phone_no1) {
 		this.phone_no1 = phone_no1;
 	}
-	public int getPhone_no2() {
+	public long getPhone_no2() {
 		return phone_no2;
 	}
-	public void setPhone_no2(int phone_no2) {
+	public void setPhone_no2(long phone_no2) {
 		this.phone_no2 = phone_no2;
 	}
 	public int getFax() {
@@ -103,7 +97,7 @@ public class AdminModel {
 
 	@Override
 	public String toString() {
-		return "AdminModel [hotel_id=" + hotel_id + ", user_id=" + user_id + ", city=" + city + ", hotel_name="
+		return "AdminModel [hotel_id=" + hotel_id + ", city=" + city + ", hotel_name="
 				+ hotel_name + ", address=" + address + ", description=" + description + ", email=" + email
 				+ ", avg_rate_per_night=" + avg_rate_per_night + ", rating=" + rating + ", phone_no1=" + phone_no1
 				+ ", phone_no2=" + phone_no2 + ", fax=" + fax + "]";

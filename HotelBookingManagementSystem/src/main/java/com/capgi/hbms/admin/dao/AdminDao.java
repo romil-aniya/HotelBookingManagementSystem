@@ -8,6 +8,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+
 import com.capgi.hbms.admin.model.AdminModel;
 import com.capgi.hbms.admin.model.BookingModel;
 import com.capgi.hbms.admin.model.RoomModel;
@@ -56,8 +57,27 @@ public class AdminDao implements AdminDaoInterface {
 		return false;
 	}
 	
-	public List<AdminModel> listHotelsAdmin(){
+	public List<AdminModel> listHotelsAdmin() throws SQLException{
 		List<AdminModel> listhotelsadmin=new ArrayList<AdminModel>();
+		
+		ps=con.prepareStatement("select * from hotel");
+		rs=ps.executeQuery();
+		
+		while(rs.next()) {
+		AdminModel adminmodel=new AdminModel();
+		adminmodel.setHotel_id(rs.getString(1));
+		adminmodel.setCity(rs.getString(2));
+		adminmodel.setHotel_name(rs.getString(3));
+		adminmodel.setAddress(rs.getString(4));
+		adminmodel.setDescription(rs.getString(5));
+		adminmodel.setAvg_rate_per_night(rs.getDouble(6));
+		adminmodel.setPhone_no1(rs.getInt(7));
+		adminmodel.setPhone_no2(rs.getInt(8));
+		adminmodel.setRating(rs.getDouble(9));
+		adminmodel.setEmail(rs.getString(10));
+		adminmodel.setFax(rs.getInt(11));
+		listhotelsadmin.add(adminmodel);
+		}
 		
 		return listhotelsadmin;
 	} 

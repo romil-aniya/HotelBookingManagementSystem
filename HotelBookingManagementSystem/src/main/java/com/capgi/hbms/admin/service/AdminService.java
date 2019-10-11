@@ -54,12 +54,12 @@ public class AdminService implements AdminServiceInterface {
 		return admindao.modifyRoomAdmin(room_id);
 	}
 	
-	public List<AdminModel> listHotelAdmin() throws Exception {
+	public List<AdminModel> listHotelsAdmin() throws Exception {
 		admindao=new AdminDao();
 		return admindao.listHotelsAdmin();
 	}
 	
-	public List<RoomModel> listRoomAdmin() throws Exception{
+	public List<RoomModel> listRoomsAdmin() throws Exception{
 		admindao=new AdminDao();
 		return admindao.listRoomsAdmin();
 	}

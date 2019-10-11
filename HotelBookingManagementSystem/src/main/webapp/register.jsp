@@ -39,7 +39,8 @@
 
     <form action="RegisterCustomerController" method="post">
     
- <caption><center><h1>Registration Form</h1></center></caption>
+	<caption><center><h1>Registration Form</h1></center></caption>
+ 
     <table border="1" align="center" width="400" bgcolor="#99A3A4" >
 
        

@@ -1,5 +1,6 @@
 package com.capgi.hbms.admin.dao;
 
+import java.sql.SQLException;
 import java.util.List;
 
 import com.capgi.hbms.admin.model.AdminModel;
@@ -18,7 +19,7 @@ public interface AdminDaoInterface {
 	boolean deleteRoomAdmin(int room_id);
 	boolean modifyRoomAdmin(int room_id);
 	
-	List<AdminModel> listHotelsAdmin(); 
+	List<AdminModel> listHotelsAdmin() throws SQLException; 
 	List<RoomModel> listRoomsAdmin();
 	List<BookingModel> listBookingsInHotelAdmin();
 	List<BookingModel> listGuestsInHotelAdmin();

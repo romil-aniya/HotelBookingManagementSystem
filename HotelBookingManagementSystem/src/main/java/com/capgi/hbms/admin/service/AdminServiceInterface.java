@@ -18,8 +18,8 @@ public interface AdminServiceInterface {
 	boolean deleteRoomAdmin(int room_id) throws Exception;
 	boolean modifyRoomAdmin(int room_id) throws Exception;
 	
-	List<AdminModel> listHotelAdmin() throws Exception; 
-	List<RoomModel> listRoomAdmin() throws Exception;
+	List<AdminModel> listHotelsAdmin() throws Exception; 
+	List<RoomModel> listRoomsAdmin() throws Exception;
 	List<BookingModel> listBookingsInHotelAdmin() throws Exception;
 	List<BookingModel> listGuestsInHotelAdmin() throws Exception;
 	List<BookingModel> viewBookingsInHotelOnDateAdmin() throws Exception;

@@ -7,6 +7,10 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+	<form action="ListHotelsAdminController">
+	
+		<input type="submit" name="listhotelsadmin" value="List Hotels">
+	
+	</form>
 </body>
 </html>

@@ -10,7 +10,7 @@ import com.capgi.hbms.customer.model.CustomerModel;
 public interface CustomerDaoInterface {
 
 	boolean registerCustomer(CustomerModel customermodel) throws Exception;
-	boolean loginCustomer(String user_name, String paasword);
+	boolean loginCustomer(String user_name, String paasword) throws Exception;
 	boolean logoutCustomer(CustomerModel customermodel);
 	boolean resetPasswordCustomer(int user_id);
 	boolean updateProfileCustomer(int user_id);

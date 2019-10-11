@@ -52,8 +52,23 @@ public class CustomerDao implements CustomerDaoInterface{
 
 	}
 	
-	public boolean loginCustomer(String user_name, String password) {
+	public boolean loginCustomer(String user_name, String password) throws Exception  {
+		
+		ps=con.prepareStatement("select * from users where user_name=? and password=?");
+		
+		CryptWithMD5 md5 = new CryptWithMD5();
+		String passworddencrypted = md5.cryptWithMD5(password);
+		
+		ps.setString(1, user_name);
+		ps.setString(2, passworddencrypted);
+		
+		rs=ps.executeQuery();
+		
+		if(rs.next()) {
+			return true;
+		}
 		return false;
+
 	}
 	
 	public boolean logoutCustomer(CustomerModel customermodel) {

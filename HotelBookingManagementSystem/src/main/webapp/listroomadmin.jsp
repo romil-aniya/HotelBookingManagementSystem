@@ -17,7 +17,6 @@
 <%
 List<RoomModel> listroomsadmin=(List<RoomModel>)request.getAttribute("listroomssadmin");
 
-
 for(RoomModel am:listroomsadmin){
 	
 	out.print("<tr><td>"+am.getRoom_id()+"</td>");
@@ -25,6 +24,10 @@ for(RoomModel am:listroomsadmin){
 	
 }
 %>
+
+
+
+
 
 </table>
 </body>

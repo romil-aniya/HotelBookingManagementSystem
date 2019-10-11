@@ -25,6 +25,7 @@ public class ListRoomsAdminController extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
+
 	AdminService adminservice=new AdminService();
 	
 	try {
@@ -36,6 +37,7 @@ public class ListRoomsAdminController extends HttpServlet {
 	catch(Exception e){
 		e.printStackTrace();
 	}
+
 		
 	}
 

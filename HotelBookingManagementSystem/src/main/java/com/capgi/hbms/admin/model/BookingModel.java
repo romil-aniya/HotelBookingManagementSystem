@@ -2,15 +2,15 @@ package com.capgi.hbms.admin.model;
 
 public class BookingModel {
 
-	private String booking_id, room_id, user_id, booked_from, booked_to;
-	private int no_of_adults, no_of_children;
+	private String   booked_from, booked_to;
+	private int booking_id, room_id, user_id, no_of_adults, no_of_children;
 	private double amount;
 	
 	public BookingModel() {
 		
 	}
 	
-	public BookingModel(String booking_id, String room_id, String user_id, String booked_from, String booked_to,
+	public BookingModel(int booking_id, int room_id, int user_id, String booked_from, String booked_to,
 			int no_of_adults, int no_of_children, double amount) {
 		super();
 		this.booking_id = booking_id;
@@ -24,11 +24,11 @@ public class BookingModel {
 	}
 
 
-	public String getBooking_id() {
+	public int getBooking_id() {
 		return booking_id;
 	}
 
-	public void setBooking_id(String booking_id) {
+	public void setBooking_id(int booking_id) {
 		this.booking_id = booking_id;
 	}
 
@@ -72,19 +72,19 @@ public class BookingModel {
 		this.amount = amount;
 	}
 
-	public String getRoom_id() {
+	public int getRoom_id() {
 		return room_id;
 	}
 
-	public void setRoom_id(String room_id) {
+	public void setRoom_id(int room_id) {
 		this.room_id = room_id;
 	}
 
-	public String getUser_id() {
+	public int getUser_id() {
 		return user_id;
 	}
 
-	public void setUser_id(String user_id) {
+	public void setUser_id(int user_id) {
 		this.user_id = user_id;
 	}
 

@@ -93,9 +93,25 @@ public class CustomerDao implements CustomerDaoInterface{
 		return viewProfileCustomer;
 	}
 	
-	public List<BookingModel> viewBookingCustomer(){
+	public List<BookingModel> viewBookingCustomer() throws SQLException{
 		List<BookingModel> viewBookingCustomer = new ArrayList<BookingModel>();
+		System.out.println("inside customer dao");
+		ps=con.prepareStatement("select * from bookingdetails");
+		rs=ps.executeQuery();
 		
+		while(rs.next()) {
+		BookingModel bookingmodel=new BookingModel();
+		bookingmodel.setBooking_id(rs.getInt(1));
+		bookingmodel.setRoom_id(rs.getInt(2));
+		bookingmodel.setUser_id(rs.getInt(3));
+		bookingmodel.setBooked_from(rs.getString(4));
+		bookingmodel.setBooked_to(rs.getString(5));
+		bookingmodel.setNo_of_adults(rs.getInt(6));
+		bookingmodel.setNo_of_children(rs.getInt(7));
+		bookingmodel.setAmount(rs.getInt(8));
+		viewBookingCustomer.add(bookingmodel);
+		}
+		System.out.println("After query");
 		return viewBookingCustomer;
 	}
 }

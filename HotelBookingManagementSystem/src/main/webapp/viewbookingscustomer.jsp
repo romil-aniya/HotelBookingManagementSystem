@@ -7,6 +7,9 @@
 <title>Insert title here</title>
 </head>
 <body>
+<form action="ViewBookingCustomerController" method="get">
+<input type="submit" value="view bookings">
 
+</form>
 </body>
 </html>

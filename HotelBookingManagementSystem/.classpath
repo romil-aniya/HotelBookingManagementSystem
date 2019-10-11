@@ -34,6 +34,6 @@
 			<attribute name="owner.project.facets" value="java"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry exported="true" kind="lib" path="C:/IMS Folder/JAVA/mysql-connector-java-8.0.17.jar"/>
+	<classpathentry kind="lib" path="C:/IMS Folder/mysql-connector-java-8.0.17.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

@@ -19,6 +19,6 @@ public interface CustomerDaoInterface {
 	List<CustomerModel> viewHotelCustomer(); 
 	List<RoomModel> viewRoomCustomer();
 	List<CustomerModel> viewProfileCustomer();
-	List<BookingModel> viewBookingCustomer();
+	List<BookingModel> viewBookingCustomer() throws SQLException;
 
 }

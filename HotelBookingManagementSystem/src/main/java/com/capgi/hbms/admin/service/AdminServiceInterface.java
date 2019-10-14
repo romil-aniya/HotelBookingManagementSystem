@@ -21,7 +21,7 @@ public interface AdminServiceInterface {
 	List<AdminModel> listHotelsAdmin() throws Exception; 
 	List<RoomModel> listRoomsAdmin() throws Exception;
 	List<BookingModel> listBookingsInHotelAdmin() throws Exception;
-	List<BookingModel> listGuestsInHotelAdmin() throws Exception;
+	List<CustomerModel> listGuestsInHotelAdmin() throws Exception;
 	List<BookingModel> viewBookingsInHotelOnDateAdmin() throws Exception;
 	
 }

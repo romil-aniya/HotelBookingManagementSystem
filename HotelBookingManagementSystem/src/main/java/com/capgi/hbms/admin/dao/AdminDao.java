@@ -194,8 +194,8 @@ public class AdminDao implements AdminDaoInterface {
 		return listBookingsInHotelAdmin;
 	}
 	
-	public List<BookingModel> listGuestsInHotelAdmin(){
-		List<BookingModel> listGuestsInHotelAdmin=new ArrayList<BookingModel>();
+	public List<CustomerModel> listGuestsInHotelAdmin(){
+		List<CustomerModel> listGuestsInHotelAdmin=new ArrayList<CustomerModel>();
 		
 		return listGuestsInHotelAdmin;
 	}

@@ -69,7 +69,7 @@ public class AdminService implements AdminServiceInterface {
 		return admindao.listBookingsInHotelAdmin();
 	}
 	
-	public List<BookingModel> listGuestsInHotelAdmin() throws Exception{
+	public List<CustomerModel> listGuestsInHotelAdmin() throws Exception{
 		admindao=new AdminDao();
 		return admindao.listGuestsInHotelAdmin();
 	}

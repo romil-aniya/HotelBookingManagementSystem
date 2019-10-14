@@ -13,11 +13,11 @@ public interface AdminDaoInterface {
 	boolean loginAdmin(String user_id, String password);
 	boolean logoutAdmin(CustomerModel customermodel);
 	boolean addHotelAdmin(AdminModel adminmodel) throws Exception;
-	boolean deleteHotelAdmin(int hotel_id);
-	boolean modifyHotelAdmin(int hotel_id);
-	boolean addRoomAdmin(RoomModel roommodel);
-	boolean deleteRoomAdmin(int room_id);
-	boolean modifyRoomAdmin(int room_id);
+	boolean deleteHotelAdmin(int hotel_id) throws Exception;
+	boolean modifyHotelAdmin(int hotel_id) throws Exception;
+	boolean addRoomAdmin(RoomModel roommodel) throws Exception;
+	boolean deleteRoomAdmin(int room_id) throws Exception;
+	boolean modifyRoomAdmin(int room_id) throws Exception;
 	
 	List<AdminModel> listHotelsAdmin() throws SQLException; 
 	List<RoomModel> listRoomsAdmin() throws Exception;

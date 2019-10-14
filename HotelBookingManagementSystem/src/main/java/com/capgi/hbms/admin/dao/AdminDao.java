@@ -52,7 +52,7 @@ public class AdminDao implements AdminDaoInterface {
 		int n=ps.executeUpdate();
 		System.out.println("Query Executed");
 		if(n>0) {
-			System.out.println("Customer Added");
+			System.out.println("Hotel Added");
 			return true;
 		}
 		System.out.println("Failed");
@@ -60,23 +60,85 @@ public class AdminDao implements AdminDaoInterface {
 
 	}
 	
-	public boolean deleteHotelAdmin(int hotel_id) {
+	public boolean deleteHotelAdmin(int hotel_id) throws Exception {
+		
+		ps=con.prepareStatement("delete from hotel where hotel_id = ?");
+		ps.setInt(1, hotel_id);
+		
+		int n=ps.executeUpdate();
+		System.out.println("Query Executed");
+		if(n>0) {
+			System.out.println("Hotel Deleted");
+			return true;
+		}
+		System.out.println("Failed");
+		return false;
+		
+	}
+	
+	public boolean modifyHotelAdmin(int hotel_id) throws Exception {
+		
+		ps=con.prepareStatement("update hotel set  where hotel_id = ?");
+		ps.setInt(1, hotel_id);
+		
+		int n=ps.executeUpdate();
+		System.out.println("Query Executed");
+		if(n>0) {
+			System.out.println("Hotel Modified");
+			return true;
+		}
+		System.out.println("Failed");
 		return false;
 	}
 	
-	public boolean modifyHotelAdmin(int hotel_id) {
+	public boolean addRoomAdmin(RoomModel roommodel) throws Exception {
+		
+		ps=con.prepareStatement("insert into roomdetails values(?,?,?,?,?,?)");
+		ps.setInt(1, roommodel.getHotel_id());
+		ps.setInt(2, roommodel.getRoom_id());
+		ps.setString(4, roommodel.getRoom_type());
+		ps.setInt(3, roommodel.getRoom_no());
+		ps.setDouble(5, roommodel.getPer_night_rate());
+		ps.setBoolean(6, roommodel.getAvailability());
+		
+		int n=ps.executeUpdate();
+		System.out.println("Query Executed");
+		if(n>0) {
+			System.out.println("Room Added");
+			return true;
+		}
+		System.out.println("Failed");
+		
 		return false;
 	}
 	
-	public boolean addRoomAdmin(RoomModel roommodel) {
+	public boolean deleteRoomAdmin(int room_id) throws Exception {
+		
+		ps=con.prepareStatement("delete from hotel where room_id = ?");
+		ps.setInt(1, room_id);
+		
+		int n=ps.executeUpdate();
+		System.out.println("Query Executed");
+		if(n>0) {
+			System.out.println("Room Deleted");
+			return true;
+		}
+		System.out.println("Failed");
 		return false;
 	}
 	
-	public boolean deleteRoomAdmin(int room_id) {
-		return false;
-	}
-	
-	public boolean modifyRoomAdmin(int room_id) {
+	public boolean modifyRoomAdmin(int room_id) throws Exception {
+		
+		ps=con.prepareStatement("update roomdetails set where room_id = ?");
+		ps.setInt(1, room_id);
+		
+		int n=ps.executeUpdate();
+		System.out.println("Query Executed");
+		if(n>0) {
+			System.out.println("Hotel Modified");
+			return true;
+		}
+		System.out.println("Failed");
 		return false;
 	}
 	
@@ -107,29 +169,15 @@ public class AdminDao implements AdminDaoInterface {
 	
 	public List<RoomModel> listRoomsAdmin() throws Exception{
 		List<RoomModel> listroomsAdmin=new ArrayList<RoomModel>();
+		
 		ps=con.prepareStatement("select * from roomdetails where hotel_id");
 		rs=ps.executeQuery();
 		
 		while(rs.next())
 		{
 			RoomModel roommodel=new RoomModel();
-			roommodel.setHotel_id(rs.getString(1));
-			roommodel.setRoom_id(rs.getString(2));
-			roommodel.setRoom_no(rs.getInt(3));
-			roommodel.setRoom_type(rs.getString(4));
-			roommodel.setPer_night_rate(rs.getDouble(5));
-			roommodel.setAvailability(rs.getBoolean(6));
-			listroomsAdmin.add(roommodel);
-		}
-		
-		ps=con.prepareStatement("select * from roomdetails where hotel_id");
-		rs=ps.executeQuery();
-
-		while(rs.next())
-		{
-			RoomModel roommodel=new RoomModel();
-			roommodel.setHotel_id(rs.getString(1));
-			roommodel.setRoom_id(rs.getString(2));
+			roommodel.setHotel_id(rs.getInt(1));
+			roommodel.setRoom_id(rs.getInt(2));
 			roommodel.setRoom_no(rs.getInt(3));
 			roommodel.setRoom_type(rs.getString(4));
 			roommodel.setPer_night_rate(rs.getDouble(5));

@@ -52,20 +52,12 @@ public class RegisterCustomerController extends HttpServlet implements Servlet {
 		
 		CustomerModel customermodel=new CustomerModel(user_id, password, role, user_name, address, email, mobile_no, phone);
 		customerservice=new CustomerService();
-		try {
-			customerdao=new CustomerDao();
-		} catch (ClassNotFoundException e1) {
-			// TODO Auto-generated catch block
-			e1.printStackTrace();
-		} catch (SQLException e1) {
-			// TODO Auto-generated catch block
-			e1.printStackTrace();
-		}
+		
 		System.out.println("Ready to call customerservice.registerCustomer(customermodel)");
 		
 		try {
 		//if(customerservice.registerCustomer(customermodel)) 
-		if(customerdao.registerCustomer(customermodel)){
+		if(customerservice.registerCustomer(customermodel)){
 			System.out.println("Ready to Redirect");
 //			response.sendRedirect("customerhomepage.jsp");
 			RequestDispatcher rd=request.getRequestDispatcher("customerhomepage.jsp");

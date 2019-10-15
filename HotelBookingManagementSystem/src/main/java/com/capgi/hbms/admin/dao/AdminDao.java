@@ -211,14 +211,48 @@ public class AdminDao implements AdminDaoInterface {
 		return listBookingsInHotelAdmin;
 	}
 	
-	public List<CustomerModel> listGuestsInHotelAdmin(){
-		List<CustomerModel> listGuestsInHotelAdmin=new ArrayList<CustomerModel>();
+	public List<CustomerModel> listGuestsInHotelAdmin() throws Exception{
 		
+		List<CustomerModel> listGuestsInHotelAdmin=new ArrayList<CustomerModel>();
+		ps=con.prepareStatement("");
+		rs=ps.executeQuery();
+		
+		while(rs.next())
+		{
+		CustomerModel customermodel=new CustomerModel();
+		
+		customermodel.setUser_id(rs.getInt(1));
+		customermodel.setPassword(rs.getString(2));
+		customermodel.setRole(rs.getString(3));
+		customermodel.setUser_name(rs.getString(4));
+		customermodel.setMobile_no(rs.getLong(5));
+		customermodel.setPhone(rs.getLong(6));
+		customermodel.setAddress(rs.getString(7));
+		customermodel.setEmail(rs.getString(8));
+		
+		}
 		return listGuestsInHotelAdmin;
 	}
 	
-	public List<BookingModel> viewBookingsInHotelOnDateAdmin(){
+	public List<BookingModel> viewBookingsInHotelOnDateAdmin() throws Exception{
 		List<BookingModel> viewBookingsInHotelOnDateAdmin=new ArrayList<BookingModel>();
+		
+		ps=con.prepareStatement("");
+		rs=ps.executeQuery();
+		
+		while(rs.next())
+		{
+			BookingModel bookingmodel=new BookingModel();
+			bookingmodel.setBooking_id(rs.getInt(1));
+			bookingmodel.setRoom_id(rs.getInt(2));
+			bookingmodel.setUser_id(rs.getInt(3));
+			bookingmodel.setBooked_from(rs.getString(4));
+			bookingmodel.setBooked_to(rs.getString(5));
+			bookingmodel.setNo_of_adults(rs.getInt(6));
+			bookingmodel.setNo_of_children(rs.getInt(7));
+			bookingmodel.setAmount(rs.getDouble(8));
+			
+		}
 		
 		return viewBookingsInHotelOnDateAdmin;
 	}

@@ -22,7 +22,7 @@ public interface AdminDaoInterface {
 	List<AdminModel> listHotelsAdmin() throws SQLException; 
 	List<RoomModel> listRoomsAdmin() throws Exception;
 	List<BookingModel> listBookingsInHotelAdmin() throws Exception;
-	List<CustomerModel> listGuestsInHotelAdmin();
-	List<BookingModel> viewBookingsInHotelOnDateAdmin();
+	List<CustomerModel> listGuestsInHotelAdmin() throws Exception;
+	List<BookingModel> viewBookingsInHotelOnDateAdmin() throws Exception;
 	
 }

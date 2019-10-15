@@ -1,6 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html>
 <html>
 <head>
     <title>ADD ROOM</title>
@@ -52,3 +51,53 @@
     </tr>
 
     <tr>
+
+        <th>Room Type</th>
+
+        <td><input type="text"/></td>
+
+    </tr>
+
+    <tr>
+
+        <th>Rate Per Night</th>
+
+        <td><input type="number" step="any" min="1.0" max="5" /></td>
+
+    </tr>
+
+    <tr>
+
+        <th>Availability</th>
+
+        <td><input type="text"/></td>
+
+    </tr>
+
+    
+    <tr>
+
+        <td colspan="2" align="center"><input type="submit" value="Save My Data"/>
+
+        <input type="reset" value="Reset Data"/>
+
+        </td>
+
+    </tr>
+
+</table>
+</form>
+<!--footer>
+<nav class="navbar fixed-bottom navbar-dark bg-dark">
+  <ul style='list-style-type:none;'>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+
+        </ul>
+</nav>
+</footer-->
+</body>
+</html>

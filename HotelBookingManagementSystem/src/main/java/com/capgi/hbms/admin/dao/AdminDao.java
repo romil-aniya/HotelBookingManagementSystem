@@ -214,7 +214,7 @@ public class AdminDao implements AdminDaoInterface {
 	public List<CustomerModel> listGuestsInHotelAdmin() throws Exception{
 		
 		List<CustomerModel> listGuestsInHotelAdmin=new ArrayList<CustomerModel>();
-		ps=con.prepareStatement("");
+		ps=con.prepareStatement("select bd.* , hotel_id from bookingdetails bd, hotel h, roomdetails r where r.hotel_id=h.hotel_id");
 		rs=ps.executeQuery();
 		
 		while(rs.next())
@@ -236,8 +236,12 @@ public class AdminDao implements AdminDaoInterface {
 	
 	public List<BookingModel> viewBookingsInHotelOnDateAdmin() throws Exception{
 		List<BookingModel> viewBookingsInHotelOnDateAdmin=new ArrayList<BookingModel>();
+		int hotel_id =  4;
+		String date = "2019-12-16";
 		
-		ps=con.prepareStatement("");
+		ps=con.prepareStatement("select * from bookingdetails where date=? and hotel_id=?");
+		ps.setString(1, date);
+		ps.setInt(2, hotel_id);
 		rs=ps.executeQuery();
 		
 		while(rs.next())

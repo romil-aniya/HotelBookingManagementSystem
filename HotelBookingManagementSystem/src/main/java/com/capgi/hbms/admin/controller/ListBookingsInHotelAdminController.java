@@ -23,7 +23,7 @@ public class ListBookingsInHotelAdminController extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		System.out.println("Aa gii m yaha tak");
+		
 		AdminService adminservice=new AdminService();
 		try {
 			List<BookingModel> listbookingsinhotel=adminservice.listBookingsInHotelAdmin();

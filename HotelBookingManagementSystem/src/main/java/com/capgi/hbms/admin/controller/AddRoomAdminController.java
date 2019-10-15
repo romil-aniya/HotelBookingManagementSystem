@@ -4,6 +4,7 @@ import java.io.IOException;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -15,6 +16,7 @@ import com.capgi.hbms.admin.service.AdminService;
 /**
  * Servlet implementation class AddRoomAdminController
  */
+@WebServlet("/AddHotelAdminController")
 public class AddRoomAdminController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -26,9 +28,8 @@ public class AddRoomAdminController extends HttpServlet {
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		int room_id = 0;
-		
-		int hotel_id = 1;
+		int room_id = Integer.parseInt(request.getParameter("room_id"));
+		int hotel_id = Integer.parseInt(request.getParameter("hotel_id"));
 		int room_no = Integer.parseInt(request.getParameter("room_no"));
 		String room_type = request.getParameter("room_type");
 		Double per_night_rate = Double.parseDouble(request.getParameter("per_night_rate"));

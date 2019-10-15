@@ -36,15 +36,16 @@ public class AdminDao implements AdminDaoInterface {
 	
 	public boolean addHotelAdmin(AdminModel adminmodel) throws Exception {
 		
-		ps=con.prepareStatement("insert into Users values(?,?,?,?,?,?,?,?,?,?,?)");
+		
+		ps=con.prepareStatement("insert into Hotel values(?,?,?,?,?,?,?,?,?,?,?)");
 		ps.setInt(1, adminmodel.getHotel_id());
 		ps.setString(2, adminmodel.getCity());
 		ps.setString(3, adminmodel.getHotel_name());
 		ps.setString(4, adminmodel.getAddress());
 		ps.setString(5, adminmodel.getDescription());
 		ps.setDouble(6, adminmodel.getAvg_rate_per_night());
-		ps.setLong(7, adminmodel.getPhone_no1());
-		ps.setLong(8, adminmodel.getPhone_no2());
+		ps.setString(7, adminmodel.getPhone_no1());
+		ps.setString(8, adminmodel.getPhone_no2());
 		ps.setDouble(9, adminmodel.getRating());
 		ps.setString(10, adminmodel.getEmail());
 		ps.setInt(11, adminmodel.getFax());
@@ -156,8 +157,8 @@ public class AdminDao implements AdminDaoInterface {
 		adminmodel.setAddress(rs.getString(4));
 		adminmodel.setDescription(rs.getString(5));
 		adminmodel.setAvg_rate_per_night(rs.getDouble(6));
-		adminmodel.setPhone_no1(rs.getInt(7));
-		adminmodel.setPhone_no2(rs.getInt(8));
+		adminmodel.setPhone_no1(rs.getString(7));
+		adminmodel.setPhone_no2(rs.getString(8));
 		adminmodel.setRating(rs.getDouble(9));
 		adminmodel.setEmail(rs.getString(10));
 		adminmodel.setFax(rs.getInt(11));
@@ -170,7 +171,7 @@ public class AdminDao implements AdminDaoInterface {
 	public List<RoomModel> listRoomsAdmin() throws Exception{
 		List<RoomModel> listroomsAdmin=new ArrayList<RoomModel>();
 		
-		ps=con.prepareStatement("select * from roomdetails where hotel_id");
+		ps=con.prepareStatement("select * from roomdetails");
 		rs=ps.executeQuery();
 		
 		while(rs.next())
@@ -184,12 +185,28 @@ public class AdminDao implements AdminDaoInterface {
 			roommodel.setAvailability(rs.getBoolean(6));
 			listroomsAdmin.add(roommodel);
 		}
-		
+		System.out.println(listroomsAdmin);
 		return listroomsAdmin;
 	}
 	
-	public List<BookingModel> listBookingsInHotelAdmin(){
+	public List<BookingModel> listBookingsInHotelAdmin() throws Exception{
 		List<BookingModel> listBookingsInHotelAdmin=new ArrayList<BookingModel>();
+		 
+		ps=con.prepareStatement("select * from bookingdetails");
+		//ps=con.prepareStatement("select r.hotel_id, r.room_id, b.booking_id, b.user_id, b.booked_from, b.booked_to, b.amount from roomdetails r, bookingdetails b where b.room_id = r.room_id");
+		rs=ps.executeQuery();
+		
+		BookingModel bookingmodel=new BookingModel();
+		while(rs.next()) {
+			
+			bookingmodel.setRoom_id(rs.getInt(1));
+			bookingmodel.setBooking_id(rs.getInt(2));
+			bookingmodel.setBooked_from(rs.getString(4));
+			bookingmodel.setBooked_to(rs.getString(5));
+			bookingmodel.setAmount(rs.getDouble(8));
+			
+		}
+		listBookingsInHotelAdmin.add(bookingmodel);
 		
 		return listBookingsInHotelAdmin;
 	}

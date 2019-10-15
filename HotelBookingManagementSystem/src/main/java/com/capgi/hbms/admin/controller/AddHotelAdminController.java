@@ -40,8 +40,8 @@ public class AddHotelAdminController extends HttpServlet {
 		String description = request.getParameter("description");
 		String email = request.getParameter("email");
 		Double avg_rate_per_night = Double.parseDouble(request.getParameter("avg_rate_per_night"));
-		long phone_no1 = Long.parseLong(request.getParameter("phone_no1"));
-		long phone_no2 = Long.parseLong(request.getParameter("phone_no2"));
+		String phone_no1 = request.getParameter("phone_no1");
+		String phone_no2 = request.getParameter("phone_no2");
 		Double rating = Double.parseDouble(request.getParameter("rating"));
 
 		int fax = Integer.parseInt(request.getParameter("fax"));

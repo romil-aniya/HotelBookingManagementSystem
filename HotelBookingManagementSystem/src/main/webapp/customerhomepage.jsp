@@ -8,5 +8,10 @@
 </head>
 <body>
 	<p>Main Hoon HomePage</p>
+	
+	<form method="post" action="ModifyHotelAdminController">
+		<input type="submit" value="modify details">
+	</form>
+	
 </body>
 </html>

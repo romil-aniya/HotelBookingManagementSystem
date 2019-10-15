@@ -102,8 +102,24 @@ public class CustomerDao implements CustomerDaoInterface{
 		
 		return viewRoomCustomer;
 	}
-	public List<CustomerModel> viewProfileCustomer(){
+	public List<CustomerModel> viewProfileCustomer() throws Exception{
 		List<CustomerModel> viewProfileCustomer = new ArrayList<CustomerModel>();
+		
+		ps=con.prepareStatement("select * from users where user_name=?");
+		String user_name = "user";
+		ps.setString(1, user_name);
+		rs=ps.executeQuery();
+		
+		while(rs.next()) {
+			
+			CustomerModel customermodel = new CustomerModel();
+			customermodel.setUser_name(rs.getString(4));
+			customermodel.setMobile_no(rs.getLong(5));
+			customermodel.setAddress(rs.getString(7));
+			customermodel.setEmail(rs.getString(8));
+			customermodel.setPhone(rs.getLong(6));
+			viewProfileCustomer.add(customermodel);
+		}
 		
 		return viewProfileCustomer;
 	}

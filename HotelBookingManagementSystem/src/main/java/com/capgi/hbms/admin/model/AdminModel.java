@@ -5,14 +5,14 @@ public class AdminModel {
 	private int hotel_id;
 	private String city, hotel_name, address, description, email;
 	private double avg_rate_per_night, rating;
-	private long phone_no1, phone_no2;
+	private String phone_no1, phone_no2;
 	private int fax;
 	
 	public AdminModel() {
 		
 	}
 	
-	public AdminModel(int hotel_id, String city, String hotel_name, String address, String description, String email, double avg_rate_per_night, double rating, long phone_no1, long phone_no2, int fax) {
+	public AdminModel(int hotel_id, String city, String hotel_name, String address, String description, String email, double avg_rate_per_night, double rating, String phone_no1, String phone_no2, int fax) {
 		super();
 		this.hotel_id = hotel_id;
 		this.city = city;
@@ -76,16 +76,16 @@ public class AdminModel {
 	public void setRating(double rating) {
 		this.rating = rating;
 	}
-	public long getPhone_no1() {
+	public String getPhone_no1() {
 		return phone_no1;
 	}
-	public void setPhone_no1(long phone_no1) {
+	public void setPhone_no1(String phone_no1) {
 		this.phone_no1 = phone_no1;
 	}
-	public long getPhone_no2() {
+	public String getPhone_no2() {
 		return phone_no2;
 	}
-	public void setPhone_no2(long phone_no2) {
+	public void setPhone_no2(String phone_no2) {
 		this.phone_no2 = phone_no2;
 	}
 	public int getFax() {
@@ -97,11 +97,13 @@ public class AdminModel {
 
 	@Override
 	public String toString() {
-		return "AdminModel [hotel_id=" + hotel_id + ", city=" + city + ", hotel_name="
-				+ hotel_name + ", address=" + address + ", description=" + description + ", email=" + email
-				+ ", avg_rate_per_night=" + avg_rate_per_night + ", rating=" + rating + ", phone_no1=" + phone_no1
-				+ ", phone_no2=" + phone_no2 + ", fax=" + fax + "]";
-	} 
+		return "AdminModel [hotel_id=" + hotel_id + ", city=" + city + ", hotel_name=" + hotel_name + ", address="
+				+ address + ", description=" + description + ", email=" + email + ", avg_rate_per_night="
+				+ avg_rate_per_night + ", rating=" + rating + ", phone_no1=" + phone_no1 + ", phone_no2=" + phone_no2
+				+ ", fax=" + fax + "]";
+	}
+
+	
 	
 	
 }

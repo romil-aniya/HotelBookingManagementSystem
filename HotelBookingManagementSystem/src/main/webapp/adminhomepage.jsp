@@ -7,10 +7,27 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form action="ListHotelsAdminController">
+	<form action="ListHotelsAdminController" method="get">
 	
 		<input type="submit" name="listhotelsadmin" value="List Hotels">
 	
 	</form>
+	
+	<form action="ListRoomsAdminController">
+	
+		<input type="submit" value="List Rooms">
+	
+	</form>
+	
+	<form action="ListBookingsInHotelAdminController">
+	
+		<input type="submit" value="List Rooms">
+	
+	</form>
+	
+	<form method="post" action="ModifyHotelAdminController">
+		<input type="submit" value="<Modify Hotel">
+	</form>
+	
 </body>
 </html>

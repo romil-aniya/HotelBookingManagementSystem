@@ -15,12 +15,16 @@
 <th>Room Type </th>
 </tr>
 <%
-List<RoomModel> listroomsadmin=(List<RoomModel>)request.getAttribute("listroomssadmin");
+List<RoomModel> listroomsadmin=(List<RoomModel>)request.getAttribute("listroomsadmin");
 
 for(RoomModel am:listroomsadmin){
 	
-	out.print("<tr><td>"+am.getRoom_id()+"</td>");
+	out.print("<tr><td>"+am.getHotel_id()+"</td>");
+	out.print("<td>"+am.getRoom_id()+"</td>");
+	out.print("<td>"+am.getRoom_no()+"</td>");
 	out.print("<td>"+am.getRoom_type()+"</td>");
+	out.print("<td>"+am.getPer_night_rate()+"</td>");
+	out.print("<td>"+am.getAvailability()+"</td></tr>");
 	
 }
 %>

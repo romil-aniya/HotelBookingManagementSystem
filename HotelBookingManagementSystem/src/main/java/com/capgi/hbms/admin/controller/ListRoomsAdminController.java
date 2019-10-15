@@ -16,27 +16,25 @@ import com.capgi.hbms.admin.service.AdminService;
 /**
  * Servlet implementation class ListRoomsAdminController
  */
-@WebServlet("/ListRoomsAdminController")
+//@WebServlet("/ListRoomsAdminController")
 public class ListRoomsAdminController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
+	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
+	
+	System.out.println("Inside servlet");
 
 	AdminService adminservice=new AdminService();
-	
-	try {
-	List<RoomModel> listroomsadmin=adminservice.listRoomsAdmin();
-	RequestDispatcher rd=request.getRequestDispatcher("listroomadmin.jsp");
-	request.setAttribute("listroomsadmin", listroomsadmin);
-	rd.forward(request, response);
-	}
-	catch(Exception e){
-		e.printStackTrace();
-	}
+		
+		  try { List<RoomModel> listroomsadmin=adminservice.listRoomsAdmin();
+		  RequestDispatcher rd=request.getRequestDispatcher("listroomadmin.jsp");
+		  request.setAttribute("listroomsadmin", listroomsadmin); rd.forward(request,
+		  response); } catch(Exception e){ e.printStackTrace(); }
+		 
 
 		
 	}

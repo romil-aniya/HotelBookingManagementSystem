@@ -18,7 +18,7 @@ public interface CustomerDaoInterface {
 	boolean modifyBookingCustomer(BookingModel bookingmodel);
 	List<CustomerModel> viewHotelCustomer(); 
 	List<RoomModel> viewRoomCustomer();
-	List<CustomerModel> viewProfileCustomer();
+	List<CustomerModel> viewProfileCustomer() throws Exception;
 	List<BookingModel> viewBookingCustomer() throws SQLException;
 
 }

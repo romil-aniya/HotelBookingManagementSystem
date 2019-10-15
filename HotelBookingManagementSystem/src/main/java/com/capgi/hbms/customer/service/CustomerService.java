@@ -35,9 +35,9 @@ public class CustomerService implements CustomerServiceInterface{
 		return customerdao.updateProfileCustomer(user_id);
 	}
 	
-	public boolean bookRoomCustomer(RoomModel roommodel) throws Exception {
+	public boolean bookRoomCustomer(BookingModel bookmodel) throws Exception {
 		customerdao = new CustomerDao();
-		return customerdao.bookRoomCustomer(roommodel);
+		return customerdao.bookRoomCustomer(bookmodel);
 	}
 	
 	public boolean modifyBookingCustomer(BookingModel bookingmodel) throws Exception {
@@ -45,14 +45,14 @@ public class CustomerService implements CustomerServiceInterface{
 		return customerdao.modifyBookingCustomer(bookingmodel);
 	}
 	
-	public List<CustomerModel> viewHotelCustomer() throws Exception {
+	public List<AdminModel> viewHotelCustomer() throws Exception {
 		customerdao = new CustomerDao();
 		return customerdao.viewHotelCustomer();
 	}
 	
-	public List<RoomModel> viewRoomCustomer() throws Exception {
+	public List<RoomModel> viewRoomCustomer(int hotel_id) throws Exception {
 		customerdao = new CustomerDao();
-		return customerdao.viewRoomCustomer();
+		return customerdao.viewRoomCustomer(hotel_id);
 	}
 	
 	public List<CustomerModel> viewProfileCustomer() throws Exception {

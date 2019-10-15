@@ -83,22 +83,72 @@ public class CustomerDao implements CustomerDaoInterface{
 		return false;
 	}
 	
-	public boolean bookRoomCustomer(RoomModel roommodel) {
+	public boolean bookRoomCustomer(BookingModel bookingmodel) throws Exception {
+		
+		System.out.println("inside dao function");
+		ps=con.prepareStatement("insert into bookingdetails values(?,?,?,?,?,?,?,?)");
+		ps.setInt(1, bookingmodel.getBooking_id());
+		ps.setInt(2, bookingmodel.getUser_id());
+		ps.setInt(3, bookingmodel.getRoom_id());
+		ps.setString(4, bookingmodel.getBooked_from());
+		ps.setString(5, bookingmodel.getBooked_to());
+		ps.setInt(6, bookingmodel.getNo_of_adults());
+		ps.setInt(7, bookingmodel.getNo_of_children());
+		ps.setDouble(8, bookingmodel.getAmount());
+		System.out.println("after query");
+		
+		int n=ps.executeUpdate();
+		System.out.println("Query Executed");
+		if(n>0) {
+			System.out.println("Booked");
+			return true;
+		}
+		System.out.println("Failed");
 		return false;
+		
+		
 	}
 	
 	public boolean modifyBookingCustomer(BookingModel bookingmodel) {
 		return false;
 	}
 	
-	public List<CustomerModel> viewHotelCustomer(){
-		List<CustomerModel> viewHotelCustomer = new ArrayList<CustomerModel>();
-		
+	public List<AdminModel> viewHotelCustomer() throws Exception{
+		List<AdminModel> viewHotelCustomer = new ArrayList<AdminModel>();
+		ps=con.prepareStatement("select * from hotel");
+		rs=ps.executeQuery();
+		while(rs.next()) {
+		AdminModel adminmodel=new AdminModel();
+		adminmodel.setHotel_id(rs.getInt(1));
+		adminmodel.setCity(rs.getString(2));
+		adminmodel.setHotel_name(rs.getString(3));
+		adminmodel.setAddress(rs.getString(4));
+		adminmodel.setDescription(rs.getString(5));
+		adminmodel.setAvg_rate_per_night(rs.getDouble(6));
+		adminmodel.setPhone_no1(rs.getString(7));
+		adminmodel.setPhone_no2(rs.getString(8));
+		adminmodel.setRating(rs.getDouble(9));
+		adminmodel.setEmail(rs.getString(10));
+		adminmodel.setFax(rs.getInt(11));
+		viewHotelCustomer.add(adminmodel);
+		}
 		return viewHotelCustomer;
 	}
 	
-	public List<RoomModel> viewRoomCustomer(){
+	public List<RoomModel> viewRoomCustomer(int hotel_id) throws Exception{
 		List<RoomModel> viewRoomCustomer = new ArrayList<RoomModel>();
+		ps=con.prepareStatement("select * from roomdetails where hotel_id = "+hotel_id);
+		rs=ps.executeQuery();
+		while(rs.next()) {
+		RoomModel roommodel=new RoomModel();
+		roommodel.setHotel_id(rs.getInt(1));
+		roommodel.setRoom_id(rs.getInt(2));
+		roommodel.setRoom_no(rs.getInt(3));
+		roommodel.setRoom_type(rs.getString(4));
+		roommodel.setPer_night_rate(rs.getDouble(5));
+		roommodel.setAvailability(rs.getBoolean(6));
+		viewRoomCustomer.add(roommodel);
+		}
 		
 		return viewRoomCustomer;
 	}

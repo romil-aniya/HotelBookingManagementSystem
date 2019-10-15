@@ -26,6 +26,7 @@ public class AdminDao implements AdminDaoInterface {
 	}
 	
 	
+	
 	public boolean loginAdmin(String user_id, String password) {
 		return false;
 	}
